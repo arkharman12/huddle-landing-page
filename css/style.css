@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap");
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.125rem;
+  font-family: "Open Sans", sans-serif;
+  color: #00252e;
+}
+
+section.hero {
+  min-height: 100vh;
+  background: url("../images/bg-hero-mobile.svg");
+  background-color: #ebfbff;
+}
+
+section.hero .hero__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px 15px 0 15px;
+}
+
+section.hero .hero__nav img {
+  width: 100px;
+  height: auto;
+}
+
+section.hero .hero__nav a.hero__nav-cta {
+  font-size: 0.75rem;
+  text-decoration: none;
+  color: #00252e;
+  background: #fff;
+  border-radius: 20px;
+  padding: 5px 25px;
+  font-weight: 700;
+  box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
+}
+
+section.hero .hero__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0 35px;
+}
+
+section.hero .hero__content h1 {
+  font-family: "Poppins", sans-serif;
+  margin: 80px 0 25px 0;
+  text-align: center;
+}
+
+section.hero .hero__content h3 {
+  font-weight: normal;
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+section.hero .hero__content a.hero__content-cta {
+  font-size: 0.75rem;
+  text-decoration: none;
+  background: #ff52bf;
+  color: #fff;
+  padding: 12px 60px;
+  border-radius: 20px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+section.hero .hero__content img {
+  width: 100%;
+  margin-bottom: 40px;
+}
