@@ -15,6 +15,7 @@ section.hero {
   min-height: 100vh;
   background: url("../images/bg-hero-mobile.svg");
   background-color: #ebfbff;
+  margin-bottom: 60px;
 }
 
 section.hero .hero__nav {
@@ -75,4 +76,45 @@ section.hero .hero__content a.hero__content-cta {
 section.hero .hero__content img {
   width: 100%;
   margin-bottom: 40px;
+}
+
+section.cards {
+  margin: 0 20px;
+}
+
+section.cards .grow, section.cards .flowing, section.cards .users {
+  box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
+  border-radius: 15px;
+  padding: 40px;
+  margin-bottom: 35px;
+}
+
+section.cards .grow img, section.cards .flowing img, section.cards .users img {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+section.cards .grow h3, section.cards .flowing h3, section.cards .users h3 {
+  text-align: center;
+  margin: 20px;
+}
+
+section.cards .grow p, section.cards .flowing p, section.cards .users p {
+  text-align: center;
+  font-size: 1rem;
+  color: #808d99;
+}
+
+section.cards .users {
+  margin-bottom: 200px;
+}
+
+section.footer {
+  background-color: #00252e;
+  color: #fff;
+  padding: 150px 20px 50px 20px;
+}
+
+section.footer svg.huddle-logo path {
+  fill: #fff;
 }
