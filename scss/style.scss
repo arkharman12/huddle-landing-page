@@ -27,6 +27,7 @@ body {
     color: $very-dark-cyan;
 }
 
+// Hero section
 section.hero {
     min-height: 100vh;
     background: url("../images/bg-hero-mobile.svg");
@@ -94,6 +95,7 @@ section.hero {
     }
 }
 
+// Cards section
 section.cards {
     margin: 0 20px;
     
@@ -125,6 +127,7 @@ section.cards {
     }
 }
 
+// Footer section
 section.footer {
     background-color: $very-dark-cyan;
     color: #fff;
@@ -141,7 +144,7 @@ section.footer {
     .location, .phone, .email {
         display: flex;
         align-items: center;
-        margin-bottom: 15px;
+        margin-bottom: 25px;
 
         svg {
             margin-right: 15px;
@@ -169,23 +172,38 @@ section.footer {
         }
     }
 
-    .circle {
-        display: inline-block;
-        border: 1px solid #fff;
-        border-radius: 50%;
-        padding: 8px;
+    .social-svgs {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 65px;
+
+        .fb-svg-circle, .twitter-svg-circle, .insta-svg-circle {
+            display: inline-flex;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            padding: 8px;
+            
+            .icon {
+                width: 1em;
+                height: 1em;
+                stroke-width: 0;
+                stroke: #fff;
+                fill: #fff;
+            }
+        
+            .icon-facebook, .icon-twitter, .icon-instagram {
+                font-size: 18px;
+            }
+        }
     }
 
-    .icon {
-        width: 1em;
-        height: 1em;
-        stroke-width: 0;
-        stroke: #fff;
-        fill: #fff;
-    }
-
-    .icon-facebook, .icon-twitter, .icon-instagram {
-        font-size: 32px;
+    p.copyright {
+        font-size: 12px;
+        font-family: $font-open-sans;
+        text-align: center;
+        margin: 25px 0 0 0;
+        font-weight: 700;
     }
     
 }
