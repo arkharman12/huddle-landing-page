@@ -19,6 +19,8 @@ section.hero {
 }
 
 section.hero .hero__nav {
+  max-width: 1300px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -41,7 +43,13 @@ section.hero .hero__nav a.hero__nav-cta {
   box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
 }
 
+section.hero .hero__nav a.hero__nav-cta:hover {
+  opacity: 0.75;
+}
+
 section.hero .hero__content {
+  max-width: 1300px;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -74,16 +82,22 @@ section.hero .hero__content .hero__content-text a.hero__content-cta {
   font-weight: 700;
 }
 
+section.hero .hero__content .hero__content-text a.hero__content-cta:hover {
+  opacity: 0.75;
+}
+
 section.hero .hero__content .hero__content-img img {
   width: 100%;
   margin: 50px 0 40px 0;
 }
 
 section.cards {
-  margin: 0 20px;
+  margin: 0 25px;
 }
 
 section.cards .grow, section.cards .flowing, section.cards .users {
+  max-width: 1300px;
+  margin: 0 auto;
   box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
   border-radius: 15px;
   padding: 40px;
@@ -143,64 +157,73 @@ section.community .community-content a.community-cta {
   box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
 }
 
+section.community .community-content a.community-cta:hover {
+  opacity: 0.75;
+}
+
 section.footer {
   background-color: #00252e;
   color: #fff;
   padding: 150px 20px 50px 20px;
 }
 
-section.footer .logo-text svg.huddle-logo {
+section.footer .footer-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+section.footer .footer-container .logo-text svg.huddle-logo {
   margin-bottom: 15px;
 }
 
-section.footer .logo-text svg.huddle-logo path {
+section.footer .footer-container .logo-text svg.huddle-logo path {
   fill: #fff;
 }
 
-section.footer .logo-text .location, section.footer .logo-text .phone, section.footer .logo-text .email {
+section.footer .footer-container .logo-text .location, section.footer .footer-container .logo-text .phone, section.footer .footer-container .logo-text .email {
   display: flex;
   align-items: center;
   margin-bottom: 25px;
 }
 
-section.footer .logo-text .location svg, section.footer .logo-text .phone svg, section.footer .logo-text .email svg {
+section.footer .footer-container .logo-text .location svg, section.footer .footer-container .logo-text .phone svg, section.footer .footer-container .logo-text .email svg {
   margin-right: 15px;
 }
 
-section.footer .logo-text .location p a, section.footer .logo-text .phone p a, section.footer .logo-text .email p a {
+section.footer .footer-container .logo-text .location p a, section.footer .footer-container .logo-text .phone p a, section.footer .footer-container .logo-text .email p a {
   text-decoration: none;
   color: #fff;
 }
 
-section.footer ul {
+section.footer .footer-container ul {
   list-style: none;
   margin-top: 50px;
 }
 
-section.footer ul li {
+section.footer .footer-container ul li {
   margin-bottom: 20px;
 }
 
-section.footer ul li a {
+section.footer .footer-container ul li a {
   text-decoration: none;
   color: #fff;
 }
 
-section.footer .social-svgs {
+section.footer .footer-container .social-svgs {
   display: flex;
   justify-content: center;
   gap: 15px;
   margin-top: 65px;
 }
 
-section.footer .social-svgs .fb-svg-circle, section.footer .social-svgs .twitter-svg-circle, section.footer .social-svgs .insta-svg-circle {
+section.footer .footer-container .social-svgs .fb-svg-circle, section.footer .footer-container .social-svgs .twitter-svg-circle, section.footer .footer-container .social-svgs .insta-svg-circle {
   display: inline-flex;
   border: 1px solid #fff;
   border-radius: 50%;
   padding: 8px;
 }
 
-section.footer .social-svgs .fb-svg-circle .icon, section.footer .social-svgs .twitter-svg-circle .icon, section.footer .social-svgs .insta-svg-circle .icon {
+section.footer .footer-container .social-svgs .fb-svg-circle .icon, section.footer .footer-container .social-svgs .twitter-svg-circle .icon, section.footer .footer-container .social-svgs .insta-svg-circle .icon {
   width: 1em;
   height: 1em;
   stroke-width: 0;
@@ -208,15 +231,24 @@ section.footer .social-svgs .fb-svg-circle .icon, section.footer .social-svgs .t
   fill: #fff;
 }
 
-section.footer .social-svgs .fb-svg-circle .icon-facebook, section.footer .social-svgs .fb-svg-circle .icon-twitter, section.footer .social-svgs .fb-svg-circle .icon-instagram, section.footer .social-svgs .twitter-svg-circle .icon-facebook, section.footer .social-svgs .twitter-svg-circle .icon-twitter, section.footer .social-svgs .twitter-svg-circle .icon-instagram, section.footer .social-svgs .insta-svg-circle .icon-facebook, section.footer .social-svgs .insta-svg-circle .icon-twitter, section.footer .social-svgs .insta-svg-circle .icon-instagram {
+section.footer .footer-container .social-svgs .fb-svg-circle .icon-facebook, section.footer .footer-container .social-svgs .fb-svg-circle .icon-twitter, section.footer .footer-container .social-svgs .fb-svg-circle .icon-instagram, section.footer .footer-container .social-svgs .twitter-svg-circle .icon-facebook, section.footer .footer-container .social-svgs .twitter-svg-circle .icon-twitter, section.footer .footer-container .social-svgs .twitter-svg-circle .icon-instagram, section.footer .footer-container .social-svgs .insta-svg-circle .icon-facebook, section.footer .footer-container .social-svgs .insta-svg-circle .icon-twitter, section.footer .footer-container .social-svgs .insta-svg-circle .icon-instagram {
   font-size: 18px;
 }
 
-section.footer .social-svgs p.copyright-desk {
+section.footer .footer-container .social-svgs .fb-svg-circle:hover, section.footer .footer-container .social-svgs .twitter-svg-circle:hover, section.footer .footer-container .social-svgs .insta-svg-circle:hover {
+  border: 1px solid #ff52bf;
+}
+
+section.footer .footer-container .social-svgs .fb-svg-circle:hover .icon, section.footer .footer-container .social-svgs .twitter-svg-circle:hover .icon, section.footer .footer-container .social-svgs .insta-svg-circle:hover .icon {
+  stroke: #ff52bf;
+  fill: #ff52bf;
+}
+
+section.footer .footer-container .social-svgs p.copyright-desk {
   display: none;
 }
 
-section.footer p.copyright-mobile {
+section.footer .footer-container p.copyright-mobile {
   font-size: 12px;
   font-family: "Open Sans", sans-serif;
   text-align: center;
@@ -346,67 +378,71 @@ section.footer p.copyright-mobile {
     box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
   }
   section.footer {
-    display: flex;
     gap: 40px;
     background-color: #00252e;
     color: #fff;
     padding: 150px 20px 50px 20px;
   }
-  section.footer .logo-text svg.huddle-logo {
+  section.footer .footer-container {
+    display: flex;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  section.footer .footer-container .logo-text svg.huddle-logo {
     margin-bottom: 15px;
   }
-  section.footer .logo-text svg.huddle-logo path {
+  section.footer .footer-container .logo-text svg.huddle-logo path {
     fill: #fff;
   }
-  section.footer .logo-text .location, section.footer .logo-text .phone, section.footer .logo-text .email {
+  section.footer .footer-container .logo-text .location, section.footer .footer-container .logo-text .phone, section.footer .footer-container .logo-text .email {
     display: flex;
     align-items: center;
     margin-bottom: 25px;
   }
-  section.footer .logo-text .location svg, section.footer .logo-text .phone svg, section.footer .logo-text .email svg {
+  section.footer .footer-container .logo-text .location svg, section.footer .footer-container .logo-text .phone svg, section.footer .footer-container .logo-text .email svg {
     margin-right: 15px;
   }
-  section.footer .logo-text .location p a, section.footer .logo-text .phone p a, section.footer .logo-text .email p a {
+  section.footer .footer-container .logo-text .location p a, section.footer .footer-container .logo-text .phone p a, section.footer .footer-container .logo-text .email p a {
     text-decoration: none;
     color: #fff;
   }
-  section.footer ul {
+  section.footer .footer-container ul {
     display: flex;
     gap: 40px;
     list-style: none;
     margin-top: 60px;
   }
-  section.footer ul li {
+  section.footer .footer-container ul li {
     margin-bottom: 5px;
   }
-  section.footer ul li a {
+  section.footer .footer-container ul li a {
     text-decoration: none;
     color: #fff;
   }
-  section.footer .social-svgs {
+  section.footer .footer-container .social-svgs {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
     gap: 0px;
     margin-top: 60px;
   }
-  section.footer .social-svgs .fb-svg-circle, section.footer .social-svgs .twitter-svg-circle, section.footer .social-svgs .insta-svg-circle {
+  section.footer .footer-container .social-svgs .fb-svg-circle, section.footer .footer-container .social-svgs .twitter-svg-circle, section.footer .footer-container .social-svgs .insta-svg-circle {
     align-self: flex-start;
     border: 1px solid #fff;
     border-radius: 50%;
     padding: 8px;
   }
-  section.footer .social-svgs .fb-svg-circle .icon, section.footer .social-svgs .twitter-svg-circle .icon, section.footer .social-svgs .insta-svg-circle .icon {
+  section.footer .footer-container .social-svgs .fb-svg-circle .icon, section.footer .footer-container .social-svgs .twitter-svg-circle .icon, section.footer .footer-container .social-svgs .insta-svg-circle .icon {
     width: 1em;
     height: 1em;
     stroke-width: 0;
     stroke: #fff;
     fill: #fff;
   }
-  section.footer .social-svgs .fb-svg-circle .icon-facebook, section.footer .social-svgs .fb-svg-circle .icon-twitter, section.footer .social-svgs .fb-svg-circle .icon-instagram, section.footer .social-svgs .twitter-svg-circle .icon-facebook, section.footer .social-svgs .twitter-svg-circle .icon-twitter, section.footer .social-svgs .twitter-svg-circle .icon-instagram, section.footer .social-svgs .insta-svg-circle .icon-facebook, section.footer .social-svgs .insta-svg-circle .icon-twitter, section.footer .social-svgs .insta-svg-circle .icon-instagram {
+  section.footer .footer-container .social-svgs .fb-svg-circle .icon-facebook, section.footer .footer-container .social-svgs .fb-svg-circle .icon-twitter, section.footer .footer-container .social-svgs .fb-svg-circle .icon-instagram, section.footer .footer-container .social-svgs .twitter-svg-circle .icon-facebook, section.footer .footer-container .social-svgs .twitter-svg-circle .icon-twitter, section.footer .footer-container .social-svgs .twitter-svg-circle .icon-instagram, section.footer .footer-container .social-svgs .insta-svg-circle .icon-facebook, section.footer .footer-container .social-svgs .insta-svg-circle .icon-twitter, section.footer .footer-container .social-svgs .insta-svg-circle .icon-instagram {
     font-size: 18px;
   }
-  section.footer .social-svgs p.copyright-desk {
+  section.footer .footer-container .social-svgs p.copyright-desk {
     display: block;
     font-size: 12px;
     font-family: "Open Sans", sans-serif;
@@ -414,7 +450,40 @@ section.footer p.copyright-mobile {
     margin: 100px 0 0 0;
     font-weight: 700;
   }
-  section.footer p.copyright-mobile {
+  section.footer .footer-container p.copyright-mobile {
     display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  section.hero {
+    min-height: 80vh;
+  }
+  section.hero .hero__nav a.hero__nav-cta {
+    font-size: 0.75rem;
+  }
+  section.hero .hero__content .hero__content-text h1 {
+    font-size: 2.375rem;
+  }
+  section.hero .hero__content .hero__content-text h3 {
+    font-size: 1rem;
+  }
+  section.cards .grow, section.cards .flowing, section.cards .users {
+    padding: 40px 40px 40px 100px;
+    margin-bottom: 35px;
+  }
+  section.cards .grow__text h3, section.cards .flowing__text h3, section.cards .users__text h3 {
+    font-size: 1.75rem;
+    margin: 20px 0 20px 0;
+  }
+  section.cards .grow__text p, section.cards .flowing__text p, section.cards .users__text p {
+    font-size: 1rem;
+    color: #808d99;
+  }
+  section.cards .users {
+    margin-bottom: 50px;
+  }
+  section.community .community-content h4 {
+    font-size: 1.5rem;
   }
 }

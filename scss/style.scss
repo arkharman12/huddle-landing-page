@@ -33,8 +33,10 @@ section.hero {
     background: url("../images/bg-hero-mobile.svg");
     background-color: $very-pale-cyan;
     margin-bottom: 60px;
-
+    
     .hero__nav {
+        max-width: 1300px;
+        margin: 0 auto;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -55,9 +57,15 @@ section.hero {
             font-weight: 700;
             box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
         }
+
+        a.hero__nav-cta:hover {
+            opacity: 0.75;
+        }
     }
 
     .hero__content {
+        max-width: 1300px;
+        margin: 0 auto;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -87,6 +95,10 @@ section.hero {
                 border-radius: 20px;
                 font-weight: 700;
             }
+
+            a.hero__content-cta:hover {
+                opacity: 0.75;
+            }
         }
         
         .hero__content-img {
@@ -101,9 +113,11 @@ section.hero {
 
 // Cards section
 section.cards {
-    margin: 0 20px;
-    
+    margin: 0 25px;
+
     .grow, .flowing, .users {
+        max-width: 1300px;
+        margin: 0 auto;
         box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
         border-radius: 15px;
         padding: 40px;
@@ -167,6 +181,10 @@ section.community {
             margin-bottom: 50px;
             box-shadow: rgba(149, 157, 165, 0.4) 0px 8px 24px;
         }
+
+        a.community-cta:hover {
+            opacity: 0.75;
+        }
     }
 
 }
@@ -177,86 +195,101 @@ section.footer {
     color: #fff;
     padding: 150px 20px 50px 20px;
 
-    .logo-text {
+    .footer-container {
+        max-width: 1300px;
+        margin: 0 auto;
 
-        svg.huddle-logo {
-            margin-bottom: 15px;
-            
-                path {
-                    fill: #fff;
+        .logo-text {
+    
+            svg.huddle-logo {
+                margin-bottom: 15px;
+                
+                    path {
+                        fill: #fff;
+                    }
+            }
+        
+            .location, .phone, .email {
+                display: flex;
+                align-items: center;
+                margin-bottom: 25px;
+        
+                svg {
+                    margin-right: 15px;
                 }
+        
+                p {
+                    a {
+                        text-decoration: none;
+                        color: #fff;
+                    }
+                }
+            }
         }
     
-        .location, .phone, .email {
-            display: flex;
-            align-items: center;
-            margin-bottom: 25px;
     
-            svg {
-                margin-right: 15px;
-            }
+        ul {
+            list-style: none;
+            margin-top: 50px;
     
-            p {
+            li {
+                margin-bottom: 20px;
+    
                 a {
                     text-decoration: none;
                     color: #fff;
                 }
             }
         }
-    }
-
-
-    ul {
-        list-style: none;
-        margin-top: 50px;
-
-        li {
-            margin-bottom: 20px;
-
-            a {
-                text-decoration: none;
-                color: #fff;
-            }
-        }
-    }
-
-    .social-svgs {
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-        margin-top: 65px;
-
-        .fb-svg-circle, .twitter-svg-circle, .insta-svg-circle {
-            display: inline-flex;
-            border: 1px solid #fff;
-            border-radius: 50%;
-            padding: 8px;
+    
+        .social-svgs {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 65px;
+    
+            .fb-svg-circle, .twitter-svg-circle, .insta-svg-circle {
+                display: inline-flex;
+                border: 1px solid #fff;
+                border-radius: 50%;
+                padding: 8px;
+                
+                .icon {
+                    width: 1em;
+                    height: 1em;
+                    stroke-width: 0;
+                    stroke: #fff;
+                    fill: #fff;
+                }
             
-            .icon {
-                width: 1em;
-                height: 1em;
-                stroke-width: 0;
-                stroke: #fff;
-                fill: #fff;
+                .icon-facebook, .icon-twitter, .icon-instagram {
+                    font-size: 18px;
+                }
             }
-        
-            .icon-facebook, .icon-twitter, .icon-instagram {
-                font-size: 18px;
+
+            .fb-svg-circle:hover, .twitter-svg-circle:hover, .insta-svg-circle:hover {
+                border: 1px solid $pink;
+
+                .icon {
+                    stroke: $pink;
+                    fill: $pink;
+                }
+            }
+    
+            p.copyright-desk {
+                display: none;
             }
         }
-
-        p.copyright-desk {
-            display: none;
+    
+        p.copyright-mobile {
+            font-size: 12px;
+            font-family: $font-open-sans;
+            text-align: center;
+            margin: 25px 0 0 0;
+            font-weight: 700;
         }
     }
-
-    p.copyright-mobile {
-        font-size: 12px;
-        font-family: $font-open-sans;
-        text-align: center;
-        margin: 25px 0 0 0;
-        font-weight: 700;
-    }
+    
 }
 
 // Media queries
@@ -417,95 +450,171 @@ section.footer {
 
     // Footer section
     section.footer {
-        display: flex;
         gap: 40px;
         background-color: $very-dark-cyan;
         color: #fff;
         padding: 150px 20px 50px 20px;
-
-        .logo-text {
-
-            svg.huddle-logo {
-                margin-bottom: 15px;
-                
-                    path {
-                        fill: #fff;
-                    }
-            }
         
-            .location, .phone, .email {
-                display: flex;
-                align-items: center;
-                margin-bottom: 25px;
-        
-                svg {
-                    margin-right: 15px;
+        .footer-container {
+            display: flex;
+            max-width: 1300px;
+            margin: 0 auto;
+
+            .logo-text {
+    
+                svg.huddle-logo {
+                    margin-bottom: 15px;
+                    
+                        path {
+                            fill: #fff;
+                        }
                 }
-        
-                p {
+            
+                .location, .phone, .email {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 25px;
+            
+                    svg {
+                        margin-right: 15px;
+                    }
+            
+                    p {
+                        a {
+                            text-decoration: none;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+    
+    
+            ul {
+                display: flex;
+                gap: 40px;
+                list-style: none;
+                margin-top: 60px;
+    
+                li {
+                    margin-bottom: 5px;
+    
                     a {
                         text-decoration: none;
                         color: #fff;
                     }
                 }
             }
-        }
-
-
-        ul {
-            display: flex;
-            gap: 40px;
-            list-style: none;
-            margin-top: 60px;
-
-            li {
-                margin-bottom: 5px;
-
-                a {
-                    text-decoration: none;
-                    color: #fff;
-                }
-            }
-        }
-
-        .social-svgs {
-            display: flex;
-            justify-content: flex-start;
-            flex-direction: column;
-            gap: 0px;
-            margin-top: 60px;
-
-            .fb-svg-circle, .twitter-svg-circle, .insta-svg-circle {
-                align-self: flex-start;
-                border: 1px solid #fff;
-                border-radius: 50%;
-                padding: 8px;
+    
+            .social-svgs {
+                display: flex;
+                justify-content: flex-start;
+                flex-direction: column;
+                gap: 0px;
+                margin-top: 60px;
+    
+                .fb-svg-circle, .twitter-svg-circle, .insta-svg-circle {
+                    align-self: flex-start;
+                    border: 1px solid #fff;
+                    border-radius: 50%;
+                    padding: 8px;
+                    
+                    .icon {
+                        width: 1em;
+                        height: 1em;
+                        stroke-width: 0;
+                        stroke: #fff;
+                        fill: #fff;
+                    }
                 
-                .icon {
-                    width: 1em;
-                    height: 1em;
-                    stroke-width: 0;
-                    stroke: #fff;
-                    fill: #fff;
+                    .icon-facebook, .icon-twitter, .icon-instagram {
+                        font-size: 18px;
+                    }
                 }
-            
-                .icon-facebook, .icon-twitter, .icon-instagram {
-                    font-size: 18px;
+    
+                p.copyright-desk {
+                    display: block;
+                    font-size: 12px;
+                    font-family: $font-open-sans;
+                    text-align: left;
+                    margin: 100px 0 0 0;
+                    font-weight: 700;
                 }
             }
-
-            p.copyright-desk {
-                display: block;
-                font-size: 12px;
-                font-family: $font-open-sans;
-                text-align: left;
-                margin: 100px 0 0 0;
-                font-weight: 700;
+    
+            p.copyright-mobile {
+                display: none;
             }
         }
 
-        p.copyright-mobile {
-            display: none;
-        }
     }
 }
+
+@media (min-width: 1024px) {
+
+    // Hero section
+    section.hero {
+        min-height: 80vh;
+    
+        .hero__nav {
+    
+            a.hero__nav-cta {
+                font-size: 0.75rem;
+            }
+        }
+    
+        .hero__content {
+    
+            .hero__content-text {
+    
+                h1 {
+                    font-size: 2.375rem;
+                }
+        
+                h3 {
+                    font-size: 1rem;
+                }
+            }
+
+        }
+    }
+
+    // Cards section
+    section.cards {
+        
+        .grow, .flowing, .users {
+            padding: 40px 40px 40px 100px;
+            margin-bottom: 35px;
+
+            &__text {
+
+                h3 {
+                    font-size: 1.75rem;
+                    margin: 20px 0 20px 0;
+                }
+        
+                p {
+                    font-size: 1rem;
+                    color: $grayish-blue;
+                }
+            }
+        }
+
+        .users {
+            margin-bottom: 50px;
+        }
+    }
+
+    // Community section
+    section.community {
+        
+        .community-content {
+
+            h4 {
+                font-size: 1.5rem;
+            }
+        }
+
+    }
+}
+
+
